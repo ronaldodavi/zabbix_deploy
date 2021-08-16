@@ -22,7 +22,6 @@ bitsadmin /transfer zdll /priority high https://raw.githubusercontent.com/ronald
 echo Criando Arquivos de configuracao
 
 echo Server=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
-echo ServerActive=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
 echo Hostname=%COMPUTERNAME% >> c:\zabbix\zabbix_agentd.conf
 echo StartAgents=5 >> c:\zabbix\zabbix_agentd.conf
 echo DebugLevel=3 >> c:\zabbix\zabbix_agentd.conf
