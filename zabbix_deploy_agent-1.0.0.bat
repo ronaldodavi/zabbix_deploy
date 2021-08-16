@@ -14,7 +14,7 @@ mkdir dev
 echo Pasta zabbix criada no C:
 
 
-bitsadmin /transfer zconf /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_agentd.conf c:\zabbix\zabbix_agentd.conf
+
 bitsadmin /transfer zagt /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_agentd.exe c:\zabbix\zabbix_agentd.exe
 bitsadmin /transfer zget /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_get.exe c:\zabbix\zabbix_get.exe
 bitsadmin /transfer zgsed /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_sender.exe c:\zabbix\zabbix_sender.exe
