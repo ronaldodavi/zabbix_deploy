@@ -1,4 +1,4 @@
-# zabbix_deploy
+# zabbix_deploy Agent v4 LTS
 Script de Instalação para o Agente zabbix
 
 # Instalçao
