@@ -1,6 +1,6 @@
 @echo off
 rem Necessario para instalar o serviço do zabbix alterar dominio ou colocar usuario com privilegios de administrador.
-runas /user:dominio\administrator
+runas /user:administrator
 
 IF EXIST "c:\Zabbix\zabbix_agentd.exe" (exit) ELSE (echo "Iniciando a instalacao do Zabbix Agent")
 
