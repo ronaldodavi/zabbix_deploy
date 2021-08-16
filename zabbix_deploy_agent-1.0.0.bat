@@ -23,12 +23,14 @@ REM #Cria arquivo de configuração e Salvando nome do servidor #
 echo Criando Arquivos de configuracao
 # Alterar para o IP do servidor zabbix ou proxy zabbix
 echo Server=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
+echo ServerActive=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
 echo Hostname=%COMPUTERNAME% >> c:\zabbix\zabbix_agentd.conf
 echo StartAgents=5 >> c:\zabbix\zabbix_agentd.conf
 echo DebugLevel=3 >> c:\zabbix\zabbix_agentd.conf
 echo LogFile=c:\zabbix\zabbix_agentd.log >> c:\zabbix\zabbix_agentd.conf
 echo Timeout=5 >> c:\zabbix\zabbix_agentd.conf
 echo EnableRemoteCommands=1 >> C:\zabbix\zabbix_agentd.conf
+echo HostMetadata=windows >> C:\zabbix\zabbix_agentd.conf
 
 # Instalando Serviços e Gerando LOGs #
 echo Instalando o Serviço
