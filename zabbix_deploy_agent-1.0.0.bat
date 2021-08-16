@@ -9,6 +9,8 @@ echo Copiando Arquivos
 
 echo Cria diretoria na unidade C:
 mkdir c:\zabbix
+cd zabbix
+mkdir dev
 echo Pasta zabbix criada no C:
 
 
