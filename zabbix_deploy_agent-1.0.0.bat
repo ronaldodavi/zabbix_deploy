@@ -12,10 +12,10 @@ echo Pasta zabbix criada no C:
 
 REM #MODULO 3 - Realiza a cópia dos binários para o sistema#
 
-bitsadmin /transfer zagt /priority high https://raw.githubusercontent.com/geraldolucaspoli/install-zabbix-agente-windows/master/zabbix_agents_3.4.6.win/bin/win64/zabbix_agentd.exe c:\zabbix\zabbix_agentd.exe
-bitsadmin /transfer zget /priority high https://raw.githubusercontent.com/geraldolucaspoli/install-zabbix-agente-windows/master/zabbix_agents_3.4.6.win/bin/win64/zabbix_get.exe c:\zabbix\zabbix_get.exe
-bitsadmin /transfer zgsed /priority high https://raw.githubusercontent.com/geraldolucaspoli/install-zabbix-agente-windows/master/zabbix_agents_3.4.6.win/bin/win64/zabbix_sender.exe c:\zabbix\zabbix_sender.exe
-bitsadmin /transfer zconf /priority high https://raw.githubusercontent.com/geraldolucaspoli/install-zabbix-agente-windows/master/zabbix_agentd.conf c:\zabbix\zabbix_agentd.conf
+bitsadmin /transfer zagt /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_agentd.exe c:\zabbix\zabbix_agentd.exe
+bitsadmin /transfer zget /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_get.exe c:\zabbix\zabbix_get.exe
+bitsadmin /transfer zgsed /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_sender.exe c:\zabbix\zabbix_sender.exe
+bitsadmin /transfer zconf /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/zabbix_agentd.conf c:\zabbix\zabbix_agentd.conf
 
 REM #MODULO 4 *PUNK* - Cria arquivo de configuração e define nome do servidor #
 echo Criando Arquivos de configuracao
