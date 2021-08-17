@@ -12,13 +12,10 @@ mkdir c:\zabbix
 mkdir c:\zabbix\dev
 echo Pasta zabbix criada no C:
 
-
-
 bitsadmin /transfer zagt /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_agentd.exe c:\zabbix\zabbix_agentd.exe
 bitsadmin /transfer zget /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_get.exe c:\zabbix\zabbix_get.exe
 bitsadmin /transfer zgsed /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/zabbix_sender.exe c:\zabbix\zabbix_sender.exe
 bitsadmin /transfer zdll /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v4-lts/dev/zabbix_sender.dll c:\zabbix\dev\zabbix_sender.dll
-
  
 echo Criando Arquivos de configuracao
 
