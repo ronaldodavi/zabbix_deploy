@@ -2,6 +2,10 @@
 rem Necessario para instalar o serviço do zabbix alterar dominio ou colocar usuario com privilegios de administrador.
 runas /user:administrator
 
+c:\zabbix\zabbix_agentd.exe --uninstall
+cd c:\
+rd /s /Q zabbix
+
 IF EXIST "c:\Zabbix\zabbix_agentd.exe" (exit) ELSE (echo "Iniciando a instalacao do Zabbix Agent")
 
 echo Exibe mensagem na tela
