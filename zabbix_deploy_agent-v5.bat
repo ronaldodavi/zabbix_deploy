@@ -1,6 +1,5 @@
 @echo off
-rem Necessario para instalar o serviço do zabbix alterar dominio ou colocar usuario com privilegios de administrador.
-runas /user:administrator
+net start "zabbix agent"
 
 c:\zabbix\zabbix_agentd.exe --uninstall
 cd c:\
