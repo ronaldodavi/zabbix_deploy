@@ -23,13 +23,8 @@ bitsadmin /transfer zdll /priority high https://raw.githubusercontent.com/ronald
 echo Criando Arquivos de configuracao
 
 echo Server=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
+echo ServerActive=192.168.0.254 > c:\zabbix\zabbix_agentd.conf
 echo Hostname=%COMPUTERNAME% >> c:\zabbix\zabbix_agentd.conf
-echo StartAgents=5 >> c:\zabbix\zabbix_agentd.conf
-echo DebugLevel=3 >> c:\zabbix\zabbix_agentd.conf
-echo LogFile=c:\zabbix\zabbix_agentd.log >> c:\zabbix\zabbix_agentd.conf
-echo Timeout=5 >> c:\zabbix\zabbix_agentd.conf
-echo EnableRemoteCommands=1 >> C:\zabbix\zabbix_agentd.conf
-echo HostMetadata=windows >> C:\zabbix\zabbix_agentd.conf
 
 echo Instalando Serviços e Gerando LOGs 
 
@@ -38,4 +33,3 @@ C:\zabbix\zabbix_agentd.exe -s -c C:\zabbix\zabbix_agentd.conf
 net start "zabbix agent"
 echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as %time%
 echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as %time% > c:\zabbix\inst_agent.log
-pause
