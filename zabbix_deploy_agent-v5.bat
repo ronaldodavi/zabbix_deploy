@@ -25,11 +25,9 @@ echo Timeout=5 >> c:\zabbix\zabbix_agentd.conf
 echo EnableRemoteCommands=1 >> C:\zabbix\zabbix_agentd.conf
 echo HostMetadata=windows >> C:\zabbix\zabbix_agentd.conf
 
-echo Instalando Serviços e Gerando LOGs 
-
 C:\zabbix\zabbix_agentd.exe -i -c C:\zabbix\zabbix_agentd.conf
 C:\zabbix\zabbix_agentd.exe -s -c C:\zabbix\zabbix_agentd.conf
 net start "zabbix agent"
 net restart "zabbix agent"
-echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as %time%
-echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as %time% > c:\zabbix\inst_agent.log
+echo As configuracoes para o servidor >> c:\zabbix\inst_agent.log
+echo %COMPUTERNAME% foram criadas em %date% as %time% >> c:\zabbix\inst_agent.log
