@@ -5,8 +5,6 @@ c:\zabbix\zabbix_agentd.exe --uninstall
 cd c:\
 rd /s /Q zabbix
 
-IF EXIST "c:\Zabbix\zabbix_agentd.exe" (exit) ELSE (echo "Iniciando a instalacao do Zabbix Agent")
-
 echo Exibe mensagem na tela
 echo Copiando Arquivos
 
