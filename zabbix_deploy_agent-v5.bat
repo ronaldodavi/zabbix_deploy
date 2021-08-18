@@ -1,5 +1,5 @@
 @echo off
-net start "zabbix agent"
+net stop "zabbix agent"
 
 c:\zabbix\zabbix_agentd.exe --uninstall
 cd c:\
