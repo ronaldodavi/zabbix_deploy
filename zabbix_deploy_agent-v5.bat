@@ -5,9 +5,6 @@ c:\zabbix\zabbix_agentd.exe --uninstall
 cd c:\
 rd /s /Q zabbix
 
-echo Exibe mensagem na tela
-echo Copiando Arquivos
-
 echo Cria diretoria na unidade C:
 mkdir c:\zabbix
 mkdir c:\zabbix\dev
@@ -17,8 +14,6 @@ bitsadmin /transfer zagt /priority high https://raw.githubusercontent.com/ronald
 bitsadmin /transfer zget /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v5/zabbix_get.exe c:\zabbix\zabbix_get.exe
 bitsadmin /transfer zgsed /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v5/zabbix_sender.exe c:\zabbix\zabbix_sender.exe
 bitsadmin /transfer zdll /priority high https://raw.githubusercontent.com/ronaldodavi/zabbix_deploy/main/agent-v5/dev/zabbix_sender.dll c:\zabbix\dev\zabbix_sender.dll
- 
-echo Criando Arquivos de configuracao
 
 echo Server=192.168.0.254 >> c:\zabbix\zabbix_agentd.conf
 echo ServerActive=192.168.0.254 >> c:\zabbix\zabbix_agentd.conf
