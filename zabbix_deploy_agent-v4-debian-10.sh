@@ -1,7 +1,5 @@
-
-
 #Instalacao do repositorio
-
+apt-get install wget -y
 wget https://repo.zabbix.com/zabbix/4.4/debian/pool/main/z/zabbix-release/zabbix-release_4.4-1+buster_all.deb
 mkdir /etc/zabbix
 dpkg -i zabbix-release_4.4-1+buster_all.deb
