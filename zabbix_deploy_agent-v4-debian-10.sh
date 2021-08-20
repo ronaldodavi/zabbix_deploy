@@ -1,11 +1,14 @@
 #Instalacao do repositorio
-apt-get install wget -y
+
 wget https://repo.zabbix.com/zabbix/4.4/debian/pool/main/z/zabbix-release/zabbix-release_4.4-1+buster_all.deb
+wait
 mkdir /etc/zabbix
 dpkg -i zabbix-release_4.4-1+buster_all.deb
+wait
 apt-get update
-
+wait
 apt-get install zabbix-agent
+rm -rf /etc/zabbix/zabbix_agentd.conf
 
 #Criacao configucao do arquivo:
 #Alterar IP do server e serverActive
