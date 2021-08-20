@@ -38,3 +38,5 @@ HostMetadata=linux
 systemctl enable zabbix-agent && systemctl start zabbix-agent && systemctl status zabbix-agent
 #Liberand porta do agente
 iptables -A INPUT -p tcp -s 192.168.0.254 --dport 10050 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+cat /etc/zabbix/zabbix_agentd.conf
