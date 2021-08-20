@@ -1,5 +1,6 @@
 #Instalacao do repositorio
-
+apt-get remove zabbix-agent
+wait
 wget https://repo.zabbix.com/zabbix/4.4/debian/pool/main/z/zabbix-release/zabbix-release_4.4-1+buster_all.deb
 wait
 mkdir /etc/zabbix
