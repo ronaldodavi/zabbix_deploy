@@ -7,7 +7,7 @@ yum -y remove zabbix*
 wait
 #Instalacao do repositorio
 
-rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-2.el7.noarch.rpm
+rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-agent-4.0.9-3.el7.x86_64.rpm
 wait
 #Instalacao do agente zabbix
 
