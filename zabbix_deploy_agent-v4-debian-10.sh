@@ -1,5 +1,5 @@
 #Instalacao do repositorio
-apt-get remove zabbix-agent
+apt-get remove zabbix-agent -y
 wait
 wget https://repo.zabbix.com/zabbix/4.4/debian/pool/main/z/zabbix-release/zabbix-release_4.4-1+buster_all.deb
 wait
@@ -8,7 +8,7 @@ dpkg -i zabbix-release_4.4-1+buster_all.deb
 wait
 apt-get update
 wait
-apt-get install zabbix-agent
+apt-get install zabbix-agent -y
 rm -rf /etc/zabbix/zabbix_agentd.conf
 
 #Criacao configucao do arquivo:
@@ -29,6 +29,6 @@ HostMetadata=linux
 #Ativacao do agente
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
-service zabbix-agent restart
+systemctl restart zabbix-agent
 #Liberand porta do agente
 iptables -I INPUT  -p tcp --dport 10050 -j ACCEPT
