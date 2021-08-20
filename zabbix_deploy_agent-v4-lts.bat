@@ -33,4 +33,4 @@ echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as 
 echo As configuracoes para o servidor >> c:\zabbix\inst_agent.log
 echo %COMPUTERNAME% foram criadas em %date% as %time% >> c:\zabbix\inst_agent.log
 
-c:\zabbix/zabbix_agentd.conf
+c:\zabbix\zabbix_agentd.conf
