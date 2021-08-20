@@ -27,5 +27,4 @@ systemctl enable zabbix-agent
 systemctl start zabbix-agent
 service zabbix-agent restart
 #Liberand porta do agente
-sudo ufw allow 10050
-sudo ufw reload
+iptables -I INPUT  -p tcp --dport 10050 -j ACCEPT
