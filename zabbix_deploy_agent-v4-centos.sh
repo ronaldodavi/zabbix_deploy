@@ -1,5 +1,5 @@
 #!/bin/bash
-#Para Centos e RockLinux
+#Para Centos
 #Remocao zabbix antigo se houver
 
 
