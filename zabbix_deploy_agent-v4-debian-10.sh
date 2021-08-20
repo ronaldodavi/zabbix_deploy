@@ -33,3 +33,5 @@ systemctl restart zabbix-agent
 systemctl status zabbix-agent
 #Liberand porta do agente
 iptables -I INPUT  -p tcp --dport 10050 -j ACCEPT
+
+cat /etc/zabbix/zabbix_agentd.conf
