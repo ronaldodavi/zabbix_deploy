@@ -30,5 +30,6 @@ HostMetadata=linux
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
 systemctl restart zabbix-agent
+systemctl status zabbix-agent
 #Liberand porta do agente
 iptables -I INPUT  -p tcp --dport 10050 -j ACCEPT
