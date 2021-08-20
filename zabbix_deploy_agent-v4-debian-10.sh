@@ -1,0 +1,33 @@
+
+
+#Instalacao do repositorio
+
+sudo wget https://repo.zabbix.com/zabbix/4.4/debian/pool/main/z/zabbix-release/zabbix-release_4.4-1+buster_all.deb
+
+sudo dpkg -i zabbix-release_4.4-1+buster_all.deb
+sudo apt-get update
+
+sudo apt-get install zabbix-agent
+
+#Criacao configucao do arquivo:
+#Alterar IP do server e serverActive
+echo "
+Server=192.168.0.254
+ServerActive=192.168.0.254
+Hostname=$(hostname)
+StartAgents=5
+DebugLevel=3
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix/zabbix_agentd.log
+Timeout=5
+EnableRemoteCommands=1
+HostMetadata=linux
+" >> /etc/zabbix/zabbix_agentd.conf
+
+#Ativacao do agente
+sudo systemctl enable zabbix-agent
+sudo systemctl start zabbix-agent
+sudo service zabbix-agent restart
+#Liberand porta do agente
+sudo ufw allow 10050
+sudo ufw reload
