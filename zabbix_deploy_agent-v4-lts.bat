@@ -32,3 +32,5 @@ net restart "zabbix agent"
 echo As configuracoes para o servidor %COMPUTERNAME% foram criadas em %date% as %time%
 echo As configuracoes para o servidor >> c:\zabbix\inst_agent.log
 echo %COMPUTERNAME% foram criadas em %date% as %time% >> c:\zabbix\inst_agent.log
+
+cat /etc/zabbix/zabbix_agentd.conf
