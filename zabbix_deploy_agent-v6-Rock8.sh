@@ -22,9 +22,9 @@ mv /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.orig
 #Alterar IP do server e serverActive
 echo "
 
-Server=10.100.0.254
-ServerActive=10.100.0.254
-Hostname=SEFIN-CAUCAIA-LNX-AD1
+Server=IP-SERVER-MONITORAMENTO
+ServerActive=IP-SERVER-MONITORAMENTO
+Hostname=NOME-DO-HOST
 StartAgents=5
 DebugLevel=3
 PidFile=/var/run/zabbix/zabbix_agentd.pid
