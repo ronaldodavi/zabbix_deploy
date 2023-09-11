@@ -40,6 +40,9 @@ systemctl enable zabbix-agent && systemctl start zabbix-agent && systemctl statu
 #Liberand porta do agente
 iptables -A INPUT -p tcp -s 10.100.0.254 --dport 10050 -m state --state NEW,ESTABLISHED -j ACCEPT
 
+sudo setenforce 0
+sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+
 cat /etc/zabbix/zabbix_agentd.conf
 
 
